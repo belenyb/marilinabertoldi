@@ -1,0 +1,342 @@
+@import "variables";
+
+/* Fonts */
+@import "https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap";
+@import "https://fonts.googleapis.com/css2?family=Montserrat+Subrayada:wght@400;700&display=swap";
+
+/* 
+Paleta de colores 
+cyan #38e0db
+violeta claro #9645b6
+violeta oscuro #9449b7
+color piel #e3c1a6
+azul #609bd4
+blanco #fefefe
+*/
+
+body {
+	font-family: 'Montserrat', sans-serif;
+	background-color: $color-blanco;
+} 
+/* Navbar */
+nav {
+	background-color: $color-blanco;
+	ul {
+		list-style: none;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		padding: 0;
+		margin: 0;
+		a {
+			text-decoration: none;
+			color: #2b2b2b;
+			margin: 5px 0;
+			&:hover {
+				color: $color-cyan;
+				text-shadow: $sombra-violeta-claro;
+				transform: skewY(3deg);
+			}
+		}
+		li {
+			text-align: center;
+		}
+	}
+	.nav-item {
+		.navbar-brand {
+			img {
+				width: 3em;
+			}
+		}
+	}
+	.nav-link.active {
+		color: $color-cyan;
+		text-shadow: $sombra-violeta-claro;
+		transform: skewY(3deg);
+	}
+	.navbar-toggler {
+		.navbar-toggler-icon {
+			.header__toggler--color {
+				color: $color-azul;
+				text-shadow: $sombra-violeta-claro;
+			}
+		}
+		&:focus {
+			border-color: $color-blanco;
+			-webkit-box-shadow: none;
+			box-shadow: none;
+			outline: none;
+		}
+	}
+	.navbar-toggler[aria-expanded="true"] {
+		.navbar-toggler-icon {
+			i {
+				transform: rotate(90deg);
+				transition: 300ms linear all;
+			}
+		}
+	}
+	.header__logo--size {
+		img {
+			width: 3.5em;
+			padding: 4px 12px;
+		}
+	}
+}
+/* Footer */
+footer {
+	padding: 20px 0;
+	background: $color-blanco;
+	.footer__list--alignment {
+		margin: 0;
+		padding: 0;
+		display: flex;
+		justify-content: center;
+		list-style: none;
+		a {
+			padding: 0 0.5%;
+		}
+		li {
+			i {
+				color: #2b2b2b;
+				font-size: 1.3em;
+				&:hover {
+					transform: translate(0px, -5px);
+					color: $color-violeta-claro;
+					text-shadow: 1px 1px $color-cyan;
+				}
+			}
+		}
+	}
+}
+/* Home */
+.home {
+    background-image: url(../assets/images/home-bg.gif);
+	background-repeat: no-repeat;
+	background-position: center;
+	display: flex;
+	flex-direction: column;
+	text-align: center;
+	align-items: center;
+	justify-content: center;
+}
+.home__title {
+	animation-name: homeInfoAnimation;
+	animation-delay: 0s;
+	animation-duration: 5s;
+	animation-iteration-count: 1;
+	animation-timing-function: ease-in;
+	h1 {
+		font-family: $fuente-titulo;
+		color: white;
+	}
+	h2 {
+		color: white;
+	}
+}
+@keyframes homeInfoAnimation {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+/* Fechas */
+.containerFechas {
+    background-image: url(../assets/images/bg5.jpg);
+	background-repeat: no-repeat;
+	background-size: cover;
+	h1 {
+		text-align: center;
+		font-family: $fuente-titulo;
+	}
+}
+/* Contacto */
+.divContainer {
+	padding: 50px;
+}
+.containerContacto {
+    background-image: url(../assets/images/bg-contacto.jpg);
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+	.btn-submit {
+		border: 1.2px solid $color-cyan;
+		color: $color-blanco;
+		background: rgba(0, 0, 0, 0.616);
+		border-radius: 0px;
+		&:hover {
+			border: 1.2px solid $color-violeta-claro;
+			color: $color-blanco;
+			background: rgba(0, 0, 0, 0.151);
+			border-radius: 0px;
+		}
+	}
+	h1 {
+		text-align: center;
+		font-family: $fuente-titulo;
+	}
+}
+/* Merch */
+.containerMerch {
+	background-color: rgb(26, 25, 25);
+	display: flex;
+    align-items: center;
+}
+.merch {
+	h1 {
+		text-align: center;
+		font-family: $fuente-titulo;
+	}
+	.carousel {
+		width: auto;
+		padding: 1em 0;
+		.carousel-inner {
+			img {
+				width: 44%;
+			}
+		}
+	}
+}
+.carousel-control-next {
+	background: transparent !important;
+	border: none;
+	&:focus {
+		background: transparent !important;
+		border: none;
+	}
+	&:hover {
+		background: transparent !important;
+		border: none;
+	}
+}
+.carousel-control-prev {
+	background: transparent !important;
+	border: none;
+	&:focus {
+		background: transparent !important;
+		border: none;
+	}
+	&:hover {
+		background: transparent !important;
+		border: none;
+	}
+}
+/* Musica */
+.containerMusica {
+	background: linear-gradient(180deg, rgba(28,28,28,1) 0%, rgba(48,48,48,1) 49%, rgb(51, 51, 51) 100%);
+	overflow-y: scroll;
+	.spotify-logo {
+		width: 10%;
+	}
+	h1 {
+    text-align: center;
+    font-family: "Montserrat Subrayada", sans-serif;
+	}
+	h2 {
+		font-size: 1.5em;
+        font-family: $fuente-titulo;
+	}
+    h3 {
+        font-size: 1em;
+    }
+}
+.containerMusica::-webkit-scrollbar {
+  width: 0.5em;
+}
+.containerMusica::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 9px 3px rgb(97, 150, 211);
+}
+.containerMusica::-webkit-scrollbar-thumb {
+  background-color: #be7acd;
+  outline: 1px solid #00000024;
+}
+.neon {
+	color: #fff;
+    text-shadow: 0 0 5px $color-violeta-claro, 0 0 10px $color-violeta-claro, 0 0 20px $color-violeta-claro, 0 0 40px $color-cyan, 0 0 80px $color-cyan, 0 0 90px $color-cyan, 0 0 100px $color-cyan, 0 0 150px $color-cyan;
+}
+@media (max-width: 767px) {
+	.nav-link {
+		padding: 0;
+		font-size: 1.2em;
+	}
+	nav {
+		background: $color-blanco;
+	}
+}
+/* Media Queries */
+@media (min-width: 992px) {
+	.home {
+		background-size: auto 79vh;
+		height: 79vh;
+		width: 71%;
+		margin: 5% auto 0 auto;
+	}
+	.containerContacto {
+		height: 79vh;
+		width: 71%;
+		margin: 5% auto 0 auto;
+		flex-direction: column;
+	}
+}
+@media (min-width: 426px) and (max-width: 991px) {
+	.home {
+		background-size: auto 88vh;
+		height: 88vh;
+		margin: 9% auto 0 auto;
+	}
+	.containerContacto {
+		height: 88vh;
+		margin: 9% auto 0 auto;
+		display: flex;
+    	align-items: center;
+    	justify-content: center;
+		flex-direction: column;
+	}
+	.containerMusica, .containerMerch, .containerFechas {
+		height: 88vh;
+		width: 100%;
+	}
+	.containerFechas {
+		.songkick-widget {
+			padding-top: 3rem;
+		}
+	}
+}
+@media (max-width: 425px) {
+	.home {
+		background-size: auto 84vh;
+		height: 84vh;
+		margin: 18% auto 0 auto;
+	}
+	.containerContacto {
+		height: 86vh;
+		margin: 18% auto 0 auto;
+		display: flex;
+    	align-items: center;
+    	justify-content: center;
+		flex-direction: column;
+	}
+	.containerMusica, .containerMerch, .containerFechas {
+		height: 92vh;
+		width: 100%;
+	}
+	.containerFechas {
+		.songkick-widget {
+			padding-top: 4rem;
+		}
+	}
+}
+@media (min-width: 768px) {
+	.home__title {
+		h1 {
+			font-size: 4rem;
+			font-weight: 100;
+			margin: 5px;
+		}
+		h2 {
+			margin: 5px;
+		}
+	}
+}

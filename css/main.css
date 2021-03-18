@@ -1,0 +1,283 @@
+/* Variables */
+/* Bucles */
+@import "https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap";
+@import "https://fonts.googleapis.com/css2?family=Montserrat+Subrayada:wght@400;700&display=swap";
+.containerFechas {
+  height: 79vh;
+  width: 71%;
+  margin: 5% auto 0 auto; }
+
+.containerMerch {
+  height: 79vh;
+  width: 71%;
+  margin: 5% auto 0 auto; }
+
+.containerMusica {
+  height: 79vh;
+  width: 71%;
+  margin: 5% auto 0 auto; }
+
+/* Fonts */
+/* 
+Paleta de colores 
+cyan #38e0db
+violeta claro #9645b6
+violeta oscuro #9449b7
+color piel #e3c1a6
+azul #609bd4
+blanco #fefefe
+*/
+body {
+  font-family: 'Montserrat', sans-serif;
+  background-color: #fefefe; }
+
+/* Navbar */
+nav {
+  background-color: #fefefe; }
+  nav ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0;
+    margin: 0; }
+    nav ul a {
+      text-decoration: none;
+      color: #2b2b2b;
+      margin: 5px 0; }
+      nav ul a:hover {
+        color: #38e0db;
+        text-shadow: 1px 1px #9645b6;
+        transform: skewY(3deg); }
+    nav ul li {
+      text-align: center; }
+  nav .nav-item .navbar-brand img {
+    width: 3em; }
+  nav .nav-link.active {
+    color: #38e0db;
+    text-shadow: 1px 1px #9645b6;
+    transform: skewY(3deg); }
+  nav .navbar-toggler .navbar-toggler-icon .header__toggler--color {
+    color: #609bd4;
+    text-shadow: 1px 1px #9645b6; }
+  nav .navbar-toggler:focus {
+    border-color: #fefefe;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    outline: none; }
+  nav .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon i {
+    transform: rotate(90deg);
+    transition: 300ms linear all; }
+  nav .header__logo--size img {
+    width: 3.5em;
+    padding: 4px 12px; }
+
+/* Footer */
+footer {
+  padding: 20px 0;
+  background: #fefefe; }
+  footer .footer__list--alignment {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    list-style: none; }
+    footer .footer__list--alignment a {
+      padding: 0 0.5%; }
+    footer .footer__list--alignment li i {
+      color: #2b2b2b;
+      font-size: 1.3em; }
+      footer .footer__list--alignment li i:hover {
+        transform: translate(0px, -5px);
+        color: #9645b6;
+        text-shadow: 1px 1px #38e0db; }
+
+/* Home */
+.home {
+  background-image: url(../assets/images/home-bg.gif);
+  background-repeat: no-repeat;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+  justify-content: center; }
+
+.home__title {
+  animation-name: homeInfoAnimation;
+  animation-delay: 0s;
+  animation-duration: 5s;
+  animation-iteration-count: 1;
+  animation-timing-function: ease-in; }
+  .home__title h1 {
+    font-family: "Montserrat Subrayada", sans-serif;
+    color: white; }
+  .home__title h2 {
+    color: white; }
+
+@keyframes homeInfoAnimation {
+  0% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
+
+/* Fechas */
+.containerFechas {
+  background-image: url(../assets/images/bg5.jpg);
+  background-repeat: no-repeat;
+  background-size: cover; }
+  .containerFechas h1 {
+    text-align: center;
+    font-family: "Montserrat Subrayada", sans-serif; }
+
+/* Contacto */
+.divContainer {
+  padding: 50px; }
+
+.containerContacto {
+  background-image: url(../assets/images/bg-contacto.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center; }
+  .containerContacto .btn-submit {
+    border: 1.2px solid #38e0db;
+    color: #fefefe;
+    background: rgba(0, 0, 0, 0.616);
+    border-radius: 0px; }
+    .containerContacto .btn-submit:hover {
+      border: 1.2px solid #9645b6;
+      color: #fefefe;
+      background: rgba(0, 0, 0, 0.151);
+      border-radius: 0px; }
+  .containerContacto h1 {
+    text-align: center;
+    font-family: "Montserrat Subrayada", sans-serif; }
+
+/* Merch */
+.containerMerch {
+  background-color: #1a1919;
+  display: flex;
+  align-items: center; }
+
+.merch h1 {
+  text-align: center;
+  font-family: "Montserrat Subrayada", sans-serif; }
+
+.merch .carousel {
+  width: auto;
+  padding: 1em 0; }
+  .merch .carousel .carousel-inner img {
+    width: 44%; }
+
+.carousel-control-next {
+  background: transparent !important;
+  border: none; }
+  .carousel-control-next:focus {
+    background: transparent !important;
+    border: none; }
+  .carousel-control-next:hover {
+    background: transparent !important;
+    border: none; }
+
+.carousel-control-prev {
+  background: transparent !important;
+  border: none; }
+  .carousel-control-prev:focus {
+    background: transparent !important;
+    border: none; }
+  .carousel-control-prev:hover {
+    background: transparent !important;
+    border: none; }
+
+/* Musica */
+.containerMusica {
+  background: linear-gradient(180deg, #1c1c1c 0%, #303030 49%, #333333 100%);
+  overflow-y: scroll; }
+  .containerMusica .spotify-logo {
+    width: 10%; }
+  .containerMusica h1 {
+    text-align: center;
+    font-family: "Montserrat Subrayada", sans-serif; }
+  .containerMusica h2 {
+    font-size: 1.5em;
+    font-family: "Montserrat Subrayada", sans-serif; }
+  .containerMusica h3 {
+    font-size: 1em; }
+
+.containerMusica::-webkit-scrollbar {
+  width: 0.5em; }
+
+.containerMusica::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 9px 3px #6196d3; }
+
+.containerMusica::-webkit-scrollbar-thumb {
+  background-color: #be7acd;
+  outline: 1px solid #00000024; }
+
+.neon {
+  color: #fff;
+  text-shadow: 0 0 5px #9645b6, 0 0 10px #9645b6, 0 0 20px #9645b6, 0 0 40px #38e0db, 0 0 80px #38e0db, 0 0 90px #38e0db, 0 0 100px #38e0db, 0 0 150px #38e0db; }
+
+@media (max-width: 767px) {
+  .nav-link {
+    padding: 0;
+    font-size: 1.2em; }
+  nav {
+    background: #fefefe; } }
+
+/* Media Queries */
+@media (min-width: 992px) {
+  .home {
+    background-size: auto 79vh;
+    height: 79vh;
+    width: 71%;
+    margin: 5% auto 0 auto; }
+  .containerContacto {
+    height: 79vh;
+    width: 71%;
+    margin: 5% auto 0 auto;
+    flex-direction: column; } }
+
+@media (min-width: 426px) and (max-width: 991px) {
+  .home {
+    background-size: auto 88vh;
+    height: 88vh;
+    margin: 9% auto 0 auto; }
+  .containerContacto {
+    height: 88vh;
+    margin: 9% auto 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column; }
+  .containerMusica, .containerMerch, .containerFechas {
+    height: 88vh;
+    width: 100%; }
+  .containerFechas .songkick-widget {
+    padding-top: 3rem; } }
+
+@media (max-width: 425px) {
+  .home {
+    background-size: auto 84vh;
+    height: 84vh;
+    margin: 18% auto 0 auto; }
+  .containerContacto {
+    height: 86vh;
+    margin: 18% auto 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column; }
+  .containerMusica, .containerMerch, .containerFechas {
+    height: 92vh;
+    width: 100%; }
+  .containerFechas .songkick-widget {
+    padding-top: 4rem; } }
+
+@media (min-width: 768px) {
+  .home__title h1 {
+    font-size: 4rem;
+    font-weight: 100;
+    margin: 5px; }
+  .home__title h2 {
+    margin: 5px; } }

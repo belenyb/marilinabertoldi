@@ -1,0 +1,16 @@
+/* Variables */
+$color-cyan: #38e0db;
+$color-violeta-claro: #9645b6;
+$color-azul: #609bd4;
+$color-blanco: #fefefe;
+$fuente-titulo: 'Montserrat Subrayada', sans-serif;
+$sombra-violeta-claro: 1px 1px $color-violeta-claro;
+
+/* Bucles */
+@each $section in Fechas, Merch, Musica {
+    .container#{$section} {
+        height: 79vh;
+	    width: 71%;
+	    margin: 5% auto 0 auto;
+    }
+}
