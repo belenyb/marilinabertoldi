@@ -3,17 +3,17 @@
 @import "https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap";
 @import "https://fonts.googleapis.com/css2?family=Montserrat+Subrayada:wght@400;700&display=swap";
 .containerFechas {
-  height: 79vh;
+  height: 78vh;
   width: 71%;
   margin: 5% auto 0 auto; }
 
 .containerMerch {
-  height: 79vh;
+  height: 78vh;
   width: 71%;
   margin: 5% auto 0 auto; }
 
 .containerMusica {
-  height: 79vh;
+  height: 78vh;
   width: 71%;
   margin: 5% auto 0 auto; }
 
@@ -27,6 +27,12 @@ color piel #e3c1a6
 azul #609bd4
 blanco #fefefe
 */
+html, body {
+  overflow-x: hidden;
+  width: 100%;
+  margin: 0;
+  padding: 0; }
+
 body {
   font-family: 'Montserrat', sans-serif;
   background-color: #fefefe; }
@@ -123,7 +129,7 @@ footer {
 
 /* Fechas */
 .containerFechas {
-  background-image: url(../assets/images/bg5.jpg);
+  background-image: url(../assets/images/fechas-bg.jpg);
   background-repeat: no-repeat;
   background-size: cover; }
   .containerFechas h1 {
@@ -131,9 +137,6 @@ footer {
     font-family: "Montserrat Subrayada", sans-serif; }
 
 /* Contacto */
-.divContainer {
-  padding: 50px; }
-
 .containerContacto {
   background-image: url(../assets/images/bg-contacto.jpg);
   background-repeat: no-repeat;
@@ -152,6 +155,17 @@ footer {
   .containerContacto h1 {
     text-align: center;
     font-family: "Montserrat Subrayada", sans-serif; }
+  .containerContacto input[type='text'], .containerContacto input[type='email'], .containerContacto select, .containerContacto textarea, .containerContacto textarea:focus {
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid #fff;
+    border-radius: 0;
+    color: #fff;
+    box-shadow: none; }
+  .containerContacto input[type='text']::placeholder, .containerContacto input[type='email']::placeholder, .containerContacto select, .containerContacto textarea::placeholder {
+    color: #fff; }
+  .containerContacto select option {
+    background-color: #000; }
 
 /* Merch */
 .containerMerch {
@@ -194,7 +208,7 @@ footer {
   background: linear-gradient(180deg, #1c1c1c 0%, #303030 49%, #333333 100%);
   overflow-y: scroll; }
   .containerMusica .spotify-logo {
-    width: 10%; }
+    width: 110px; }
   .containerMusica h1 {
     text-align: center;
     font-family: "Montserrat Subrayada", sans-serif; }
@@ -228,12 +242,12 @@ footer {
 /* Media Queries */
 @media (min-width: 992px) {
   .home {
-    background-size: auto 79vh;
-    height: 79vh;
+    background-size: auto 78vh;
+    height: 78vh;
     width: 71%;
     margin: 5% auto 0 auto; }
   .containerContacto {
-    height: 79vh;
+    height: 78vh;
     width: 71%;
     margin: 5% auto 0 auto;
     flex-direction: column; } }
@@ -245,7 +259,7 @@ footer {
     margin: 9% auto 0 auto; }
   .containerContacto {
     height: 88vh;
-    margin: 9% auto 0 auto;
+    margin: 7% auto 0 auto;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -254,13 +268,16 @@ footer {
     height: 88vh;
     width: 100%; }
   .containerFechas .songkick-widget {
-    padding-top: 3rem; } }
+    padding-top: 3rem; }
+  .containerMerch .carousel .carousel-inner img {
+    width: 100%;
+    height: auto; } }
 
 @media (max-width: 425px) {
   .home {
     background-size: auto 84vh;
     height: 84vh;
-    margin: 18% auto 0 auto; }
+    margin: 15% auto 0 auto; }
   .containerContacto {
     height: 86vh;
     margin: 18% auto 0 auto;
@@ -272,7 +289,10 @@ footer {
     height: 92vh;
     width: 100%; }
   .containerFechas .songkick-widget {
-    padding-top: 4rem; } }
+    padding-top: 4rem; }
+  .containerMerch .carousel .carousel-inner img {
+    width: 100%;
+    height: auto; } }
 
 @media (min-width: 768px) {
   .home__title h1 {

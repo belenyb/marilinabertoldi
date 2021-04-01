@@ -9,7 +9,7 @@ $sombra-violeta-claro: 1px 1px $color-violeta-claro;
 /* Bucles */
 @each $section in Fechas, Merch, Musica {
     .container#{$section} {
-        height: 79vh;
+        height: 78vh;
 	    width: 71%;
 	    margin: 5% auto 0 auto;
     }

@@ -13,6 +13,12 @@ color piel #e3c1a6
 azul #609bd4
 blanco #fefefe
 */
+html, body {
+	overflow-x: hidden;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
 
 body {
 	font-family: 'Montserrat', sans-serif;
@@ -144,7 +150,7 @@ footer {
 }
 /* Fechas */
 .containerFechas {
-    background-image: url(../assets/images/bg5.jpg);
+    background-image: url(../assets/images/fechas-bg.jpg);
 	background-repeat: no-repeat;
 	background-size: cover;
 	h1 {
@@ -153,9 +159,6 @@ footer {
 	}
 }
 /* Contacto */
-.divContainer {
-	padding: 50px;
-}
 .containerContacto {
     background-image: url(../assets/images/bg-contacto.jpg);
 	background-repeat: no-repeat;
@@ -176,6 +179,20 @@ footer {
 	h1 {
 		text-align: center;
 		font-family: $fuente-titulo;
+	}
+	input[type='text'], input[type='email'], select, textarea, textarea:focus {
+		background-color: transparent;
+		border: none;
+		border-bottom: 1px solid #fff;
+		border-radius: 0;
+		color: #fff;
+		box-shadow: none;
+	}
+	input[type='text']::placeholder, input[type='email']::placeholder, select, textarea::placeholder {
+ 		color: #fff;
+	}
+	select option {
+		background-color: #000;
 	}
 }
 /* Merch */
@@ -228,7 +245,7 @@ footer {
 	background: linear-gradient(180deg, rgba(28,28,28,1) 0%, rgba(48,48,48,1) 49%, rgb(51, 51, 51) 100%);
 	overflow-y: scroll;
 	.spotify-logo {
-		width: 10%;
+		width: 110px;
 	}
 	h1 {
     text-align: center;
@@ -268,13 +285,13 @@ footer {
 /* Media Queries */
 @media (min-width: 992px) {
 	.home {
-		background-size: auto 79vh;
-		height: 79vh;
+		background-size: auto 78vh;
+		height: 78vh;
 		width: 71%;
 		margin: 5% auto 0 auto;
 	}
 	.containerContacto {
-		height: 79vh;
+		height: 78vh;
 		width: 71%;
 		margin: 5% auto 0 auto;
 		flex-direction: column;
@@ -288,7 +305,7 @@ footer {
 	}
 	.containerContacto {
 		height: 88vh;
-		margin: 9% auto 0 auto;
+		margin: 7% auto 0 auto;
 		display: flex;
     	align-items: center;
     	justify-content: center;
@@ -303,12 +320,16 @@ footer {
 			padding-top: 3rem;
 		}
 	}
+	.containerMerch .carousel .carousel-inner img {
+    	width: 100%;
+    	height: auto;
+	}
 }
 @media (max-width: 425px) {
 	.home {
 		background-size: auto 84vh;
 		height: 84vh;
-		margin: 18% auto 0 auto;
+		margin: 15% auto 0 auto;
 	}
 	.containerContacto {
 		height: 86vh;
@@ -326,6 +347,10 @@ footer {
 		.songkick-widget {
 			padding-top: 4rem;
 		}
+	}
+	.containerMerch .carousel .carousel-inner img {
+    	width: 100%;
+    	height: auto;
 	}
 }
 @media (min-width: 768px) {
